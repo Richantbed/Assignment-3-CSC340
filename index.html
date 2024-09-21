@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="html, css, javascript,Learn to build websites,Learn to build applications, learn HTML, Learn CSS, Learn Javascript">
+    <meta name="description" content="Learn to build websites and applications">
+    <title>Strz-z</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="main.js">
+    </script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="content-container" class="link-text">
+
+            <div id="header">
+                <h1 Class="logo-design"></h1>
+                <h2 id="clock" class="link-text">05/16/2024 04:14pm EST</h2>
+            </div>
+
+            <nav class="nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="https://www.off---white.com/en-us/man">
+                            Shop
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Lookbook
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Info.html">
+                            Info
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            SMS List
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="nav" id="social-media-nav">
+                <ul>
+                    <li Class="social-icon-image-size">
+                        <a href="https://www.instagram.com/Supreme/">
+                            <img src="/img/socialMediaIcons/srtz-z instagram.svg" alt="Strz-z HTML Icon Image">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        // Function to update the clock every second
+        function updateClock() {
+            // Get the clock element by its ID
+            const clockElement = document.getElementById('clock');
+
+            // Get the current date and time
+            const now = new Date();
+
+            // Extract year, month, day, hours, minutes, and seconds
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+
+            // Determine AM or PM
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+
+
+            const formattedHours = hours % 12 || 12; // 0 should be 12
+
+
+            const formattedTime = `${month}/${day}/${year} ${formattedHours}:${minutes}:${seconds} ${ampm}`;
+
+
+            clockElement.textContent = formattedTime;
+        }
+
+
+        setInterval(updateClock, 1000);
+
+
+        updateClock();
+    </script>
+</body>
+
+</html>
